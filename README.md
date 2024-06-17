@@ -2,7 +2,7 @@
 
 # Application Bancaire
 
-Cette application bancaire permet de gérer des comptes bancaires avec des fonctionnalités de dépôt, retrait, consultation de solde, création et suppression de comptes. Elle peut être utilisée soit via une interface en ligne de commande (CLI), soit via une interface graphique (GUI).
+Cette application bancaire permet de gérer des comptes bancaires avec des fonctionnalités de dépôt, retrait, consultation de solde, création et suppression de comptes. Elle peut être utilisée soit via une interface en ligne de commande (terminale), soit via une interface graphique (interface).
 
 ## Structure du Projet
 
