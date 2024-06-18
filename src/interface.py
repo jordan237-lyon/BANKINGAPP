@@ -36,7 +36,10 @@ class BankApp:
         self.withdraw_button.grid(row=1, column=3)
 
         self.account_info_button = tk.Button(self.root, text="Consulter le solde", command=self.get_balance)
-        self.account_info_button.grid(row=2, columnspan=4)
+        self.account_info_button.grid(row=2, column=0, columnspan=2)
+
+        self.all_accounts_button = tk.Button(self.root, text="Consulter tous les comptes", command=self.get_all_accounts)
+        self.all_accounts_button.grid(row=2, column=2, columnspan=2)
 
     def create_account(self):
         name = self.name_entry.get()
@@ -86,7 +89,13 @@ class BankApp:
         else:
             messagebox.showwarning("Erreur", "Compte non trouvé.")
 
+    def get_all_accounts(self):
+        accounts = self.app.get_all_accounts()
+        all_accounts_str = "\n".join([f"Compte {account.name} : {account.get_balance()}" for account in accounts])
+        messagebox.showinfo("Tous les Comptes", all_accounts_str)
+
 def run_interface():
     root = tk.Tk()
     app = BankApp(root)
     root.mainloop()
+
