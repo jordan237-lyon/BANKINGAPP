@@ -51,8 +51,14 @@ def run_terminale():
                 print(f"Solde du compte {name} : {balance}")
             else:
                 print("Compte non trouvé.")
-        
+
         elif choice == "6":
+            accounts = app.get_all_accounts()
+            print("\n--- Tous les Comptes ---")
+            for account in accounts:
+                print(f"Compte {account.name} : {account.get_balance()}")
+
+        elif choice == "7":
             print("Merci d'avoir utilisé l'application bancaire.")
             break
         
